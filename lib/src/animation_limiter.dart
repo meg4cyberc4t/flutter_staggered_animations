@@ -39,8 +39,7 @@ class _AnimationLimiterState extends State<AnimationLimiter> {
   @override
   void initState() {
     super.initState();
-
-    WidgetsBinding.instance!.addPostFrameCallback((Duration value) {
+    WidgetsBinding.instance.addPostFrameCallback((Duration value) {
       if (!mounted) return;
       setState(() {
         _shouldRunAnimation = false;
